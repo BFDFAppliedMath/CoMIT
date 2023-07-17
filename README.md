@@ -17,8 +17,10 @@ for evaluating predicted risk to the COVID-19 test.
 
 ## Installation
 
-If you are in the same directory as the source (.tar.gz) file, you can
-install CoMIT like so:
+#### From Source
+
+You can install CoMIT like so, where “path” is the path to the source
+(.tar.gz) file:
 
 ``` r
 install.packages("CoMIT_1.0.0.tar.gz", repos = NULL, type = "source")
@@ -34,13 +36,21 @@ If you get the following warning:
 `WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding.`
 
 then your computer doesn’t have Rtools installed, which is required for
-installing CoMIT (and any other source packages). First run `R.version`
-in the console and take note of your version of R (it should show up
-next to the version.string variable). Then go
+installing source packages. First run `R.version` in the console and
+take note of your version of R (it should show up next to the
+version.string variable). Then go
 [here](https://cran.r-project.org/bin/windows/Rtools/) and click on the
 Rtools version that corresponds to your R version. You should be fine to
 install Rtools to the default location. Once the installer finishes, you
 should be able to install CoMIT.
+
+#### From GitHub
+
+To install CoMIT from GitHub, run the following line of code:
+
+``` r
+devtools::install_github("BFDFAppliedMath/CoMIT")
+```
 
 ## Usage
 
@@ -102,7 +112,7 @@ build_COVID_DB(DB_NAME = "test", locationPrefix = paste0(tempdir(), "/"), includ
 #>  [7] "Primer_Info"       "Primer_Locations"  "Seq_Info"         
 #> [10] "Seq_Meta"          "Var_Amplicon_Info" "Variant_Info"     
 #> [13] "Variant_Type"      "sqlite_sequence"
-#> [1] "/tmp/Rtmp6GlBTz/test.db"
+#> [1] "/tmp/RtmpzgUn3t/test.db"
 ```
 
 Here are some examples of visualizations that can be produced. These

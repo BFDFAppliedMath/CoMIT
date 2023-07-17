@@ -21,7 +21,9 @@ CoMIT is an R package developed by the Applied Math team at BioFire Defense. The
 
 ## Installation
 
-If you are in the same directory as the source (.tar.gz) file, you can install CoMIT like so:
+#### From Source
+
+You can install CoMIT like so, where "path" is the path to the source (.tar.gz) file:
 
 ``` r
 install.packages("CoMIT_1.0.0.tar.gz", repos = NULL, type = "source")
@@ -33,7 +35,15 @@ If you get the following warning:
 
 `WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding.`
 
-then your computer doesn't have Rtools installed, which is required for installing CoMIT (and any other source packages). First run `R.version` in the console and take note of your version of R (it should show up next to the version.string variable). Then go [here](https://cran.r-project.org/bin/windows/Rtools/) and click on the Rtools version that corresponds to your R version. You should be fine to install Rtools to the default location. Once the installer finishes, you should be able to install CoMIT.
+then your computer doesn't have Rtools installed, which is required for installing source packages. First run `R.version` in the console and take note of your version of R (it should show up next to the version.string variable). Then go [here](https://cran.r-project.org/bin/windows/Rtools/) and click on the Rtools version that corresponds to your R version. You should be fine to install Rtools to the default location. Once the installer finishes, you should be able to install CoMIT.
+
+#### From GitHub
+
+To install CoMIT from GitHub, run the following line of code:
+
+``` r
+devtools::install_github("BFDFAppliedMath/CoMIT")
+```
 
 ## Usage
 

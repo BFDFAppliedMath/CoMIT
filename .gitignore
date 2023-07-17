@@ -13,3 +13,5 @@ _*
 .Rproj.user/shared/notebooks/patch-chunk-names
 .Rbuildignore
 .Rhistory
+dev_use.R
+.p4ignore.txt
