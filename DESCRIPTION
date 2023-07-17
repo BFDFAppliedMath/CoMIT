@@ -1,0 +1,55 @@
+Package: CoMIT
+Type: Package
+Title: Coronavirus Monitoring for Inclusivity Tool
+Version: 1.0.1
+Author: Lia Gale
+Maintainer: Ashlie Stephenson <ashlie.stephenson@biofiredefense.com>
+Description: CoMIT builds a sqlite3 database from primer and sequence data.
+    Primer inputs are submitted via Excel file and then parsed to create a 
+    primer table which is used to analyze sequences for mismatches compared 
+    to the primers.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    Biostrings,
+    DBI,
+    DECIPHER,
+    dplyr,
+    dbplyr,
+    IRanges,
+    lubridate,
+    magrittr,
+    methods,
+    R.utils,
+    readxl,
+    rlang,
+    RSQLite,
+    seqinr,
+    stringi,
+    stringr,
+    glue,
+    tidyr,
+    grDevices,
+    tidyselect,
+    forcats,
+    viridis
+Suggests: 
+    testthat (>= 3.0.0),
+    withr,
+    readr,
+    tibble,
+    gt,
+    gtExtras,
+    webshot2,
+    ComplexHeatmap,
+    GetoptLong,
+    colorspace,
+    egg,
+    gridExtra,
+    ggplot2,
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+RoxygenNote: 7.2.1
+VignetteBuilder: knitr

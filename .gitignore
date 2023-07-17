@@ -1,0 +1,13 @@
+inst/doc
+_*
+.RData
+.Rproj.user/*
+.Rproj.user/6D4502B7/persistent-state
+.Rproj.user/6D4502B7/sources/prop/AC14FF1C
+.Rproj.user/6D4502B7/sources/prop/INDEX
+.Rproj.user/6D4502B7/sources/s-e3429043/6C17711F
+.Rproj.user/6D4502B7/sources/s-e3429043/6C17711F-contents
+.Rproj.user/6D4502B7/sources/s-e3429043/96A61E06-contents
+.Rproj.user/6D4502B7/sources/s-e3429043/lock_file
+.Rproj.user/shared/notebooks/paths
+.Rproj.user/shared/notebooks/patch-chunk-names

@@ -1,0 +1,6 @@
+Assay Name,Primer Name,Sequence,Type,Direction,cospotPrimer,isCospot
+Syn Test,A,TCTACTAATATTAAAGATG,Outer,Forward,NA,0
+Syn Test,B,CCAACTTCCAGACAGGTCTCG,Inner,Forward,NA,0
+Syn Test,C,AAGTCGCTGCTCGCGGCACCACAAG,Inner,Reverse,NA,0
+Syn Test,D,TCGTGCTACGATTCTAA,Outer ,Reverse,D_2,1
+Syn Test,D_2,TCGTGCTACGATGCTAA,Outer ,Reverse,D,1
