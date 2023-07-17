@@ -53,3 +53,4 @@ Suggests:
 Config/testthat/edition: 3
 RoxygenNote: 7.2.1
 VignetteBuilder: knitr
+URL: https://bfdfappliedmath.github.io/CoMIT/
