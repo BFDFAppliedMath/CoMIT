@@ -17,6 +17,17 @@ light_yellow_builder <- function(cols, condition) {
   )
 }
 
+order_columns <- function(df) {
+  `.` = NULL
+  columns <- as.numeric(names(df))
+  numeric_cols <- as.character(columns[!is.na(columns)])
+  numbered_cols <- df %>% dplyr::select(numeric_cols) %>% dplyr::select(sort(names(.)))
+
+  non_numbered <- df %>% dplyr::select(names(df)[!names(df) %in% numeric_cols])
+
+  df <- cbind(non_numbered, numbered_cols)
+}
+
 
 #' Format Co-occurring Mutations GT Table V2
 #'
@@ -240,12 +251,17 @@ getCoOccCounts_2 <- function(DB, HR = FALSE, startDate = NULL, endDate = NULL, a
       dplyr::mutate_all(~ replace(., is.na(.), 0))
   }
 
+  # Add columns 5-7 if needed
+  for (col in 0:7) {
+    if (!(col %in% names(total))) {
+      total <- total %>% tibble::add_column(!!toString(col) := 0)
+      df <- df %>% tibble::add_column(!!toString(col) := 0)
+    }
+  }
+
   # Order numbered columns
-  non_numbered <- df %>% dplyr::select(c(WHO_Designation, Subgroup, Displayed_Lineage, Displayed_Group))
-  numbered <- df %>%
-    dplyr::select(-c(WHO_Designation, Subgroup, Displayed_Lineage, Displayed_Group)) %>%
-    dplyr::select(sort(names(.)))
-  df <- cbind(non_numbered, numbered)
+  total <- order_columns(total)
+  df <- order_columns(df)
 
   df$Displayed_Lineage[df$Displayed_Lineage == 0] <- NA
 
@@ -253,12 +269,12 @@ getCoOccCounts_2 <- function(DB, HR = FALSE, startDate = NULL, endDate = NULL, a
     dplyr::left_join(lin_df, by = c("WHO_Designation", "Subgroup", "Displayed_Lineage", "Displayed_Group")) %>%
     rbind(c("All", " ", " ", "Summary: All Sequences by Assays", unlist(total[1, ]), total_seqs))
 
-  # Add columns 5-7 if needed
-  for (col in 0:7) {
-    if (!(col %in% colnames(df))) {
-      df <- df %>% tibble::add_column(!!toString(col) := 0, .before = "Total # Sequences")
-    }
-  }
+  # # Add columns 5-7 if needed
+  # for (col in 0:7) {
+  #   if (!(col %in% colnames(df))) {
+  #     df <- df %>% tibble::add_column(!!toString(col) := 0, .before = "Total # Sequences")
+  #   }
+  # }
 
   # Make number columns double type
   df <- df %>% dplyr::mutate(dplyr::across(`0`:`7`, as.numeric))
@@ -312,11 +328,13 @@ getCoOccCounts_2 <- function(DB, HR = FALSE, startDate = NULL, endDate = NULL, a
         dplyr::summarise(All = dplyr::n()) %>%
         tidyr::pivot_wider(names_from = s$ASSAYS_AFFECTED, values_from = All)
     }
-
-    past_total_5_or_more <- pastTotal %>% dplyr::select(c(`5`:tidyselect::last_col()))
-    past_total_5_or_more <- rowSums(past_total_5_or_more)
-
-    past_prop <- past_total_5_or_more / pastTotalSeqs
+    if("5" %in% names(pastTotal)) {
+      past_total_5_or_more <- pastTotal %>% dplyr::select(c(`5`:tidyselect::last_col()))
+      past_total_5_or_more <- rowSums(past_total_5_or_more)
+      past_prop <- past_total_5_or_more / pastTotalSeqs
+    } else {
+      past_prop <- 0
+    }
 
     prop_change <- curr_prop - past_prop
   }

@@ -205,6 +205,7 @@ makedbBreakdownTableCondensed <- function(DB, variantFile, interval, lastMonth, 
   # Format percent columns (the 3rd and 5th columns) and merge count and percent columns
   gt_tbl <- gt_tbl %>%
     gt::fmt_percent(
+      scale_values = F,
       columns = c(4, 6),
       rows = gt::everything(),
       drop_trailing_zeros = TRUE
