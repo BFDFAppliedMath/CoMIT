@@ -1,7 +1,7 @@
 Package: CoMIT
 Type: Package
 Title: Coronavirus Monitoring for Inclusivity Tool
-Version: 1.0.1
+Version: 1.0.2
 Author: Lia Gale
 Maintainer: Ashlie Stephenson <ashlie.stephenson@biofiredefense.com>
 Description: CoMIT builds a sqlite3 database from primer and sequence data.
