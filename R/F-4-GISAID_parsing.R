@@ -5,6 +5,7 @@
 #'
 #' @return List with keys: ("clade", "lineage", "subDate")
 #'          if one of the keys is not present it will be NA
+#' @noRd
 #'
 getMetaData <- function(accClade) {
   metaD <- list()
@@ -37,6 +38,7 @@ getMetaData <- function(accClade) {
 #'         If a host other than human is found or an accession number is not identified
 #'         the "continue" field will be marked false and a "Fail_Type" key will be added
 #'         containing failure mode details
+#' @noRd
 #'
 parseFastaLine <- function(line) {
   metaInfo <- list()

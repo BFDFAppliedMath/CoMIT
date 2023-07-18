@@ -108,6 +108,7 @@ generatePrimerVarLibrary <- function(primerLib) {
 #' @param currPrimerID Database Id for the primer string is a variant of
 #'
 #' @return VarID number recieved from the database
+#' @noRd
 #'
 addVariant2DB <- function(variant, currPrimerID) {
   varID <- addFoundVariant2DB(
@@ -137,6 +138,7 @@ addVariant2DB <- function(variant, currPrimerID) {
 #' @param isCospot Boolean, that determines whether variant info is pulled from the regular or cospot dataframe
 #'
 #' @return VarID number recieved from the database
+#' @noRd
 #'
 classifyVariant <- function(origPrimer, variant, currPrimerID, isCospot = FALSE) {
   # Add Variant to get ID

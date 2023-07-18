@@ -25,6 +25,7 @@ color_bad_cells <- function(cols, condition) {
 #' @param colWidth2 width for all other columns
 #'
 #' @return formatted GT table
+#' @noRd
 #'
 format_as_gt_tbl <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL) {
   `Pangolin Lineage` <- `Sequences by Lineage` <- `2h` <- `7` <- where <- NULL
@@ -156,6 +157,7 @@ format_as_gt_tbl <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL) {
 #' @param BASE_PAIR_LIMIT number of base pairs from the 3 prime end to be considered high risk
 #'
 #' @return single_assays, a dataframe with mutated sequence counts per assay
+#' @noRd
 #'
 getAssaySummaryCounts <- function(DB, HR = FALSE, BASE_PAIR_LIMIT = 10) {
   `Assay` <- `All` <- `WHO_Designation` <- `Subgroup` <- `Lineage` <- `Displayed_Lineage` <- `Displayed_Group` <- `Counts` <- `1` <- `2` <-
@@ -228,6 +230,7 @@ getAssaySummaryCounts <- function(DB, HR = FALSE, BASE_PAIR_LIMIT = 10) {
 #'
 #' @return df_5to7, a dataframe with mutated sequence counts co-occurring on multiple assays,
 #' only including rows for 5-7 assays affected and the totals
+#' @noRd
 #'
 getCoOccCounts5to7 <- function(DB, HR = FALSE) {
   WHO_Designation <- Subgroup <- Lineage <- Displayed_Lineage <- Displayed_Group <- HR_Assays_Affected <- Assays_Affected <- All <-
@@ -344,6 +347,7 @@ getCoOccCounts5to7 <- function(DB, HR = FALSE) {
 #'
 #' @return combined_df, a dataframe with counts and percentages both by assay and
 #' by co-occurring assays
+#' @noRd
 #'
 makeCombinedDataframe <- function(DB, HR = FALSE) {
   `2a` <- `7` <- `Total # Sequences` <- `Total_%` <- `2a_%` <- `2c` <- `2c_%` <-

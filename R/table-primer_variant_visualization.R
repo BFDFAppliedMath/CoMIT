@@ -7,6 +7,7 @@
 #' @param where new position of what
 #'
 #' @return vect
+#' @noRd
 #'
 reorderVect <- function(vect, what, where) {
   idx <- which(vect == what)
@@ -26,6 +27,7 @@ reorderVect <- function(vect, what, where) {
 #' @param printableDoubles Boolean, default is FALSE, if TRUE will show double mutations for a single variant ID in a single column of the visualization
 #'
 #' @return unique_var_table, a table with mutations and trends for each significant variant, comparing this subset to an older subset
+#' @noRd
 #'
 makePrimerVarMutationDF <- function(start_date, end_date,
                                     varIds = NULL,
@@ -181,6 +183,7 @@ makePrimerVarMutationDF <- function(start_date, end_date,
 #' @param dbFile File path for subset db
 #'
 #' @return freqDF, which has frequencies for each significant var ID, and linDF, which has lineage information for each significant var ID (a single var ID can be marked as part of multiple lineages in the database)
+#' @noRd
 #'
 makePrimerVarFreqLinDFs <- function(dbFile) {
   Percent_Total <- Var_Count <- Var_by_Lin <- Var_ID <- Lineage_Count <- Subgroup <-

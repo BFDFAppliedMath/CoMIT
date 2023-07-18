@@ -25,6 +25,7 @@ light_yellow_builder <- function(cols, condition) {
 #' @param colWidth2 width of all other columns in px
 #'
 #' @return formatted GT table
+#' @noRd
 #'
 format_co_gt_tbl <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL) {
   `Pangolin Lineage` <- `Sequences by Lineage` <- `Total # Sequences` <- `7` <- NULL
@@ -139,6 +140,7 @@ format_co_gt_tbl <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL) {
 #' @param HR if TRUE, returns 3 prime end, i.e. high risk, version
 #'
 #' @return df, a dataframe with mutated sequence counts co-occurring on 0 to 7 assays
+#' @noRd
 #'
 getCoOccCounts <- function(DB, HR = FALSE) {
   `:=` <- `.` <- Assays_Affected <- count <- All <- HR_Assays_Affected <- Subgroup <- Lineage <- Displayed_Lineage <- Displayed_Group <- WHO_Designation <- NULL
@@ -225,6 +227,7 @@ getCoOccCounts <- function(DB, HR = FALSE) {
 #' @param in_df input dataframe, taken from getCoOccCounts function
 #'
 #' @return out_df, a dataframe ready to be made into a GT table
+#' @noRd
 #'
 makeDFcoOcc <- function(in_df) {
   `0` <- `7` <- `Total # Sequences` <- `Total_%` <- `WHO_Designation` <- Displayed_Group <- Displayed_Lineage <- `0_%` <-

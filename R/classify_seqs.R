@@ -8,12 +8,13 @@
 #' @param refSeqFile A reference sequence for alignments. Default is the COVID Wuhan Sequence.
 #' @param removeHighN Defaults to TRUE, will remove any sequences with more
 #' than 1 percent N's
-#' @param N_PER_FILTER Percentage of Ns to filer out
+#' @param N_PER_FILTER Percentage of Ns to filter out
 #' @param silently Run with out printing progress
 #' @param leftSearchDist Integer, Left distance for buffer window region search
 #' @param rightSearchDist Integer, Right distance for buffer window region search
 #'
 #' @return A vector with run log information
+#' @noRd
 #'
 comit_classify <- function(fileName, pullDate, DATABASE_FILE, cladeDF = NA,
                            refSeqFile = NULL, removeHighN = TRUE,

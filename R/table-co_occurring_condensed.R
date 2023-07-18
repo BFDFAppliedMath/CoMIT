@@ -29,6 +29,7 @@ light_yellow_builder <- function(cols, condition) {
 #' @param colWidth5 width of "Sequences by Lineage" column in px
 #'
 #' @return formatted GT table
+#' @noRd
 #'
 format_co_gt_tbl_2 <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL, colWidth3 = NULL, colWidth4 = NULL, colWidth5 = NULL, HR = FALSE) {
   `Pangolin Lineage` <- `Sequences by Lineage` <- `Total # Sequences` <- `7` <- NULL
@@ -181,6 +182,7 @@ format_co_gt_tbl_2 <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL, colWi
 #' @param archiveDBFile File path to archive db (used to retrieve older subset of data for comparison; older subset uses same length of time as input subset db, e.g. start_date is "2022-5" and end_date is "2022-07", then older subset start date is "2022-02 and "2022-04)
 #'
 #' @return df, a dataframe with mutated sequence counts co-occurring on 0 to 7 assays
+#' @noRd
 #'
 getCoOccCounts_2 <- function(DB, HR = FALSE, startDate = NULL, endDate = NULL, archiveDBFile = NULL) {
   `:=` <- `.` <- `0` <- `5` <- `6` <- `7` <- new_col <- Assays_Affected <- count <- All <- HR_Assays_Affected <- Subgroup <- Lineage <- Displayed_Lineage <- Displayed_Group <- WHO_Designation <- Collection_Date <- prop_change <- NULL
@@ -331,6 +333,7 @@ getCoOccCounts_2 <- function(DB, HR = FALSE, startDate = NULL, endDate = NULL, a
 #' @param in_df input dataframe, taken from getCoOccCounts function
 #'
 #' @return out_df, a dataframe ready to be made into a GT table
+#' @noRd
 #'
 makeDFcoOcc_2 <- function(in_df) {
   `0` <- `7` <- `Total # Sequences` <- `Total_%` <- `WHO_Designation` <- `WHO Variant Designation` <- Displayed_Group <- Displayed_Lineage <- WHO_Designation <- `0_%` <-

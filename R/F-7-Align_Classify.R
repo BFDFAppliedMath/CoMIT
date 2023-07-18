@@ -6,6 +6,7 @@
 #' @param primersNotClassified Vector of Primers still needed
 #'
 #' @return List containing masked alignment sections for each primer
+#' @noRd
 #'
 getMaskedAlignmentList <- function(seq, accID, refSeq, primersNotClassified) { # TODO: we're passing primers we've found perfect matches for for this sequence as primersnotClassified, is that right??
 
@@ -117,6 +118,8 @@ getMaskedAlignmentList <- function(seq, accID, refSeq, primersNotClassified) { #
 #' @param DATABASE_FILE Database to add to
 #' @param cospotList List of CoSpot Primers
 #' @param saveIndelAligns Boolean that indicates whether the aligments should be saved to the server for later viewing
+#' @return a list containing the closest cospot ID for the variant, the variant seq, and whether or not it contains an indel
+#' @noRd
 #'
 classifyFromAlignment <- function(primerAlignment, currPrimerID, accID, DATABASE_FILE, cospotList = NULL, saveIndelAligns = FALSE) {
   # Classify Primers-----------------------------------------------

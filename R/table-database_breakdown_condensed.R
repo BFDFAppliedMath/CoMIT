@@ -9,6 +9,7 @@
 #' @param oneMonth a logical variable, whether the dataframe to be formatted describes data over a 3-month or 1-month period
 #'
 #' @return out_df, a dataframe with preliminary formatting applied (e.g. counts, percentages, column names) before it is combined with the other to create the gt table
+#' @noRd
 #'
 formatDF_2 <- function(df, dateColName, total_seqs, total_seqs_1m, oneMonth = FALSE) {
   Lineage <- Subgroup <- WHO_Designation <- LinSubgroup <- Displayed_Lineage <- Displayed_Group <- tempDate <- NULL
@@ -73,6 +74,7 @@ formatDF_2 <- function(df, dateColName, total_seqs, total_seqs_1m, oneMonth = FA
 #' @param total_seqs_1m total number of sequences for the 1-month period
 #'
 #' @return combined_df, a dataframe with data for both time periods and all needed formatting applied for creation of the gt table
+#' @noRd
 #'
 makeDFdatabaseBreakdown_2 <- function(DB, interval, lastMonth, total_seqs, total_seqs_1m) {
   Lineage <- Subgroup <- WHO_Designation <- Displayed_Lineage <- Displayed_Group <- NULL

@@ -12,6 +12,8 @@
 #' @param label text label for this annotation
 #' @param label_gp vector of graphic parameters for the text
 #'
+#' @noRd
+#'
 group_block_anno <- function(group, empty_anno, gp = grid::gpar(),
                              label = NULL, label_gp = grid::gpar()) {
   grid::seekViewport(GetoptLong::qq("annotation_@{empty_anno}_@{min(group)}"))
@@ -37,6 +39,7 @@ group_block_anno <- function(group, empty_anno, gp = grid::gpar(),
 #' @param coOccDF3Assay a dataframe returned by \code{makeDFcoOccHeatmap()}
 #'
 #' @return the number of sequences with mutations affecting all three assays divided by the total number of sequences in the dataset
+#' @noRd
 #'
 getThreeAssayProportion <- function(coOccDF3Assay) {
   totalSeqs <- coOccDF3Assay[c("Freq"), ] %>% rowSums()
@@ -75,6 +78,7 @@ getThreeAssayProportion <- function(coOccDF3Assay) {
 #' @param archiveDBFile File path to archive db (used to retrieve older subset of data for comparison; older subset uses same length of time as input subset db, e.g. start_date is "2022-5" and end_date is "2022-07", then older subset start date is "2022-02 and "2022-04)
 #'
 #' @return comboFreq, a dataframe with counts and percentages of each co-occurring mutation combo of assays
+#' @noRd
 #'
 makeDFcoOccHeatmap <- function(DB, HR = FALSE, BASE_PAIR_LIMIT = 10, threeAssay = FALSE, startDate = NULL, endDate = NULL, archiveDBFile = NULL) {
   Assays_Affected <- . <- Freq <- value <- Collection_Date <- Accession_ID <- Var_ID <- Assay_ID <- NULL

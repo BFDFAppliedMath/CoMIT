@@ -2,6 +2,7 @@
 #'
 #' @param DB filepath of CoMIT database
 #' @param metadata filepath of metadata
+#' @noRd
 #'
 add_extra_metadata <- function(DB, metadata) {
   `1` <- `2` <- `3` <- `Accession ID` <- `Sequencing technology` <- `Assembly method` <-

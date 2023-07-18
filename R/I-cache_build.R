@@ -153,6 +153,9 @@ setGISAIDstrings <- function() {
 
 #' Set strings in "subset" environment for pull_subset_DB function
 #'
+#' @description Set strings in "subset" environment for pull_subset_DB function
+#' @noRd
+#'
 setSubsetStrings <- function() {
   # Add Assay and Primers
   subsetStrings$build_primers <- glue::glue("INSERT INTO {s$ASSAY_TABLE}
