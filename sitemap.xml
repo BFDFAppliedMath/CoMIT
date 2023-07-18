@@ -19,73 +19,10 @@
     <loc>/index.html</loc>
   </url>
   <url>
-    <loc>/reference/addVariant2DB.html</loc>
-  </url>
-  <url>
-    <loc>/reference/add_extra_metadata.html</loc>
-  </url>
-  <url>
     <loc>/reference/buildDBFromSchema.html</loc>
   </url>
   <url>
     <loc>/reference/build_COVID_DB.html</loc>
-  </url>
-  <url>
-    <loc>/reference/classifyFromAlignment.html</loc>
-  </url>
-  <url>
-    <loc>/reference/classifyVariant.html</loc>
-  </url>
-  <url>
-    <loc>/reference/comit_classify.html</loc>
-  </url>
-  <url>
-    <loc>/reference/formatDF.html</loc>
-  </url>
-  <url>
-    <loc>/reference/formatDF_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/format_as_gt_tbl.html</loc>
-  </url>
-  <url>
-    <loc>/reference/format_as_gt_tbl_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/format_co_gt_tbl.html</loc>
-  </url>
-  <url>
-    <loc>/reference/format_co_gt_tbl_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getAssaySummaryCounts.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getAssaySummaryCounts_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getCoOccCounts.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getCoOccCounts5to7.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getCoOccCounts5to7_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getCoOccCounts_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getMaskedAlignmentList.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getMetaData.html</loc>
-  </url>
-  <url>
-    <loc>/reference/getThreeAssayProportion.html</loc>
-  </url>
-  <url>
-    <loc>/reference/group_block_anno.html</loc>
   </url>
   <url>
     <loc>/reference/index.html</loc>
@@ -106,33 +43,6 @@
     <loc>/reference/makeCoOccTablesCondensed.html</loc>
   </url>
   <url>
-    <loc>/reference/makeCombinedDataframe.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makeCombinedDataframe_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makeDFcoOcc.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makeDFcoOccHeatmap.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makeDFcoOcc_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makeDFdatabaseBreakdown.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makeDFdatabaseBreakdown_2.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makePrimerVarFreqLinDFs.html</loc>
-  </url>
-  <url>
-    <loc>/reference/makePrimerVarMutationDF.html</loc>
-  </url>
-  <url>
     <loc>/reference/makePrimerVarTable.html</loc>
   </url>
   <url>
@@ -145,19 +55,10 @@
     <loc>/reference/mismatchGenerator.html</loc>
   </url>
   <url>
-    <loc>/reference/parseFastaLine.html</loc>
-  </url>
-  <url>
     <loc>/reference/pipe.html</loc>
   </url>
   <url>
     <loc>/reference/pull_subset_db.html</loc>
-  </url>
-  <url>
-    <loc>/reference/reorderVect.html</loc>
-  </url>
-  <url>
-    <loc>/reference/setSubsetStrings.html</loc>
   </url>
   <url>
     <loc>/reference/translateMutationForward.html</loc>
