@@ -406,7 +406,7 @@ makeCoOccTables <- function(DB, variantFile, saveTable = FALSE, saveFolder = NUL
   # Change the percent columns to percent format
   gt_tbl_hr <- gt::gt(co_occ_hr, groupname_col = "rowgrp_col") %>%
     gt::fmt_percent(
-      columns = col_names_pct,
+      columns = gtExtras::all_of(col_names_pct),
       rows = gt::everything(),
       drop_trailing_zeros = TRUE
     )

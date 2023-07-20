@@ -101,7 +101,7 @@ format_as_gt_tbl <- function(in_tbl, colWidth1 = NULL, colWidth2 = NULL) {
       locations = list(gt::cells_column_labels(), gt::cells_body())
     ) %>%
     gt::fmt_number(
-      columns = cols,
+      columns = c(cols, last_col),
       use_seps = TRUE,
       sep_mark = ",",
       drop_trailing_zeros = TRUE

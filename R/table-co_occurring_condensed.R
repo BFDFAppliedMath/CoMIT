@@ -19,7 +19,7 @@ light_yellow_builder <- function(cols, condition) {
 
 order_columns <- function(df) {
   `.` = NULL
-  columns <- as.numeric(names(df))
+  columns <- suppressWarnings(as.numeric(names(df)))
   numeric_cols <- as.character(columns[!is.na(columns)])
   numbered_cols <- df %>% dplyr::select(numeric_cols) %>% dplyr::select(sort(names(.)))
 
@@ -553,7 +553,7 @@ makeCoOccTablesCondensed <- function(DB, variantFile, startDate = NULL, endDate 
   # Change the percent columns to percent format
   gt_tbl_hr <- gt::gt(co_occ_hr, groupname_col = "rowgrp_col") %>%
     gt::fmt_percent(
-      columns = col_names_pct,
+      columns = gtExtras::all_of(col_names_pct),
       rows = gt::everything(),
       drop_trailing_zeros = TRUE
     )
