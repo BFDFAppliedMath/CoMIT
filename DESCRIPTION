@@ -3,7 +3,14 @@ Type: Package
 Title: Coronavirus Monitoring for Inclusivity Tool
 Version: 1.0.2
 Author: Lia Gale
-Maintainer: Ashlie Stephenson <ashlie.stephenson@biofiredefense.com>
+Authors@R: 
+  c(person(given = "Lia",
+           family = "Gale",
+           role = c("aut")),
+    person(given = "Ashlie",
+           family = "Stephenson",
+           role = c("aut", "cre"),
+           email = "ashlie.stephenson@biofiredefense.com"))
 Description: CoMIT builds a sqlite3 database from primer and sequence data.
     Primer inputs are submitted via Excel file and then parsed to create a 
     primer table which is used to analyze sequences for mismatches compared 
